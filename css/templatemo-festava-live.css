@@ -1316,25 +1316,101 @@ strong {
 #section_6 {
   background: #111;
 }
-.teamBox div {
+.teamBox .team-row {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  margin-bottom: 30px;
 }
-.teamBox div div {
+
+.teamBox .team-row:last-child {
+  margin-bottom: 0;
+}
+
+.teamBox .team-member {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
+  margin: 0 15px;
 }
-.teamBox div div p {
+
+.teamBox .team-member p {
   color: rgb(206, 206, 206);
   font-weight: 500;
+  margin: 5px 0;
 }
+
+.teamBox .team-row-1 {
+  justify-content: center;
+}
+
+.teamBox .team-row-1 .team-member {
+  max-width: 300px;
+}
+
+.teamBox .team-row-2 .team-member {
+  max-width: 300px;
+}
+
+.teamBox .team-row-3 .team-member {
+  max-width: 250px;
+}
+
 .teamMember {
   height: 28vh;
   margin: 10px;
   border-radius: 5px;
   border: 5px solid #222;
+  object-fit: cover;
+}
+
+.team-member-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.team-member-designation {
+  color: #ccc;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles for team section */
+@media screen and (max-width: 991px) {
+  .teamBox .team-row {
+    flex-wrap: wrap;
+  }
+  
+  .teamBox .team-row-1 .team-member,
+  .teamBox .team-row-2 .team-member,
+  .teamBox .team-row-3 .team-member {
+    max-width: 100%;
+    margin: 10px;
+  }
+  
+  .teamBox .team-row-1 {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .teamBox .team-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .teamBox .team-member {
+    margin: 15px 0;
+  }
+  
+  .teamMember {
+    height: 25vh;
+  }
 }
 .copyright {
   color: rgb(217, 217, 217);
